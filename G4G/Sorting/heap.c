@@ -8,9 +8,9 @@ struct heap {
 
 void buildMaxHeap(struct heap *maxHeap, int i)
 {
-	int largest = i;  // Initialize largest as root
-    int l = (i << 1) + 1;  // left = 2*idx + 1
-    int r = (i + 1) << 1; // right = 2*idx + 2
+	int largest = i; 
+    int l = (i << 1) + 1; 
+    int r = (i + 1) << 1; 
 
 	if(l < maxHeap->size && maxHeap->arr[l] > maxHeap->arr[largest])
 		largest = l;
@@ -61,18 +61,11 @@ void printArray(int* arr, int size)
         printf("%d ", arr[i]);
 }
  
-/* Driver program to test above functions */
 int main()
 { 
     int arr[] = {12, 11, 13, 5, 6, 7};
     int size = sizeof(arr)/sizeof(arr[0]);
- 
-    printf("Given array is \n");
-    printArray(arr, size);
- 
     heapSort(arr, size);
- 
-    printf("\nSorted array is \n");
     printArray(arr, size);
     return 0;
 }
