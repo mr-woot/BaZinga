@@ -16,7 +16,8 @@ ull NextPalindromeNumber(ull number)
         ss.str("");
         ss << number;
         ss >> numberString;
-    }while(!std::equal(numberString.begin(), numberString.begin()+numberString.size()/2, numberString.rbegin()));
+    }
+    while(!equal(numberString.begin(), numberString.begin()+numberString.size()/2, numberString.rbegin()));
     return number;
 }
 int main() 
